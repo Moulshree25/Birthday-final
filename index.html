@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
@@ -39,12 +40,6 @@
                 },
             },
         };
-
-        function delayedRedirect(url, delay) {
-            setTimeout(() => {
-                window.location.href = url;
-            }, delay);
-        }
     </script>
 <style>
         body {
@@ -127,7 +122,7 @@
 </h1>
 </div>
 <div class="flex flex-col md:flex-row gap-8 justify-center items-center mt-12">
-<button class="button-retro group relative bg-leaf text-white font-retro text-4xl px-16 py-8 rounded-xl border-4 border-black shadow-retro hover:shadow-retro-hover active:shadow-retro-active" onclick="handleYes(); delayedRedirect('2.html', 3000)">
+<button class="button-retro group relative bg-leaf text-white font-retro text-4xl px-16 py-8 rounded-xl border-4 border-black shadow-retro hover:shadow-retro-hover active:shadow-retro-active" onclick="handleYes()">
                     YES!
                     <span class="absolute -top-4 -right-4 bg-primary text-white text-xs px-2 py-1 rounded border-2 border-black rotate-12 group-hover:rotate-0 transition-transform">CLICK ME</span>
 </button>
