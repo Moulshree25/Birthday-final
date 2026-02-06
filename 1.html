@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dhumbluuu | Happy Birthday!</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&amp;family=Bungee&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.6.0/confetti.browser.min.js"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#E4568B", // Sunset Petal
+                        secondary: "#F6C94D", // Golden Pollen
+                        accent: "#A7C7E4", // Evening Sky
+                        leaf: "#5D7B3D", // Leaflit Green
+                        blush: "#F29BB9", // Rosebud Blush
+                        "background-light": "#FFFDF5",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        display: ["Outfit", "sans-serif"],
+                        retro: ["Bungee", "cursive"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        "xl": "2rem",
+                    },
+                    boxShadow: {
+                        'retro': '8px 8px 0px 0px rgba(0,0,0,1)',
+                        'retro-hover': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'retro-active': '0px 0px 0px 0px rgba(0,0,0,1)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            overflow: hidden;
+            font-family: 'Outfit', sans-serif;
+        }
+        .text-outline {
+            -webkit-text-stroke: 2px black;
+            color: white;
+        }
+        .parallax-layer {
+            transition: transform 0.1s ease-out;
+        }
+        .bg-stripe {
+            height: 33.33vh;
+            width: 100%;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .comic-bubble {
+            position: absolute;
+            pointer-events: none;
+            z-index: 50;
+            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        .button-retro {
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .button-retro:active {
+            transform: translate(4px, 4px);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="fixed inset-0 z-0 flex flex-col overflow-hidden">
+<div class="bg-stripe bg-primary dark:opacity-80 flex items-center justify-end px-12">
+<span class="text-[15vw] font-black text-white opacity-20 select-none font-retro">DHUMBLUUU</span>
+</div>
+<div class="bg-stripe bg-secondary dark:opacity-80 flex items-center justify-start px-12">
+<span class="text-[15vw] font-black text-black opacity-10 select-none font-retro">BIRTHDAY</span>
+</div>
+<div class="bg-stripe bg-accent dark:opacity-80 flex items-center justify-center">
+<span class="text-[15vw] font-black text-primary opacity-20 select-none font-retro">PARTY</span>
+</div>
+</div>
+<div class="fixed inset-0 z-10 pointer-events-none" id="sticker-container">
+<div class="parallax-layer absolute top-[15%] left-[10%] floating" data-speed="0.05">
+<span class="material-icons text-white text-8xl drop-shadow-2xl">favorite</span>
+</div>
+<div class="parallax-layer absolute top-[20%] right-[15%] floating" data-speed="-0.03" style="animation-delay: -0.5s">
+<span class="material-icons text-secondary text-9xl drop-shadow-2xl">cake</span>
+</div>
+<div class="parallax-layer absolute bottom-[20%] left-[20%] floating" data-speed="0.04" style="animation-delay: -1s">
+<span class="material-icons text-blush text-7xl drop-shadow-2xl">auto_awesome</span>
+</div>
+<div class="parallax-layer absolute bottom-[15%] right-[10%] floating" data-speed="-0.05" style="animation-delay: -1.5s">
+<span class="material-icons text-leaf text-8xl drop-shadow-2xl">celebration</span>
+</div>
+</div>
+<main class="relative z-20 min-h-screen flex flex-col items-center justify-center p-6 text-center">
+<div class="max-w-4xl mx-auto space-y-12">
+<div class="space-y-4">
+<h2 class="font-display font-bold text-2xl md:text-3xl tracking-widest text-black dark:text-white bg-white/30 dark:bg-black/30 backdrop-blur-sm inline-block px-6 py-2 rounded-full border-2 border-black dark:border-white">
+                    HEY THERE!
+                </h2>
+<h1 class="font-display font-black text-7xl md:text-9xl text-black dark:text-white drop-shadow-lg uppercase leading-tight">
+                    Is it your <br/>
+<span class="text-white text-outline dark:text-primary dark:[-webkit-text-stroke:2px_white]">Special Day?</span>
+</h1>
+</div>
+<div class="flex flex-col md:flex-row gap-8 justify-center items-center mt-12">
+<button class="button-retro group relative bg-leaf text-white font-retro text-4xl px-16 py-8 rounded-xl border-4 border-black shadow-retro hover:shadow-retro-hover active:shadow-retro-active" onclick="handleYes()">
+                    YES!
+                    <span class="absolute -top-4 -right-4 bg-primary text-white text-xs px-2 py-1 rounded border-2 border-black rotate-12 group-hover:rotate-0 transition-transform">CLICK ME</span>
+</button>
+<button class="button-retro bg-white dark:bg-zinc-800 text-black dark:text-white font-retro text-2xl px-12 py-6 rounded-xl border-4 border-black shadow-retro" id="no-button" onmouseover="dodgeButton()">
+                    NO...
+                </button>
+</div>
+</div>
+</main>
+<div class="fixed top-8 right-8 z-50 flex gap-4">
+<button class="w-12 h-12 rounded-full border-4 border-black bg-white dark:bg-zinc-800 flex items-center justify-center shadow-retro hover:shadow-retro-hover transition-all" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons dark:hidden">dark_mode</span>
+<span class="material-icons hidden dark:block text-white">light_mode</span>
+</button>
+</div>
+<script>
+        // Parallax Effect
+        document.addEventListener('mousemove', (e) => {
+            const layers = document.querySelectorAll('.parallax-layer');
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
+            layers.forEach(layer => {
+                const speed = layer.getAttribute('data-speed');
+                const xShift = x * speed * 20;
+                const yShift = y * speed * 20;
+                layer.style.transform = `translate(${xShift}px, ${yShift}px)`;
+            });
+        });
+        // "No" Button Dodge Logic
+        function dodgeButton() {
+            const btn = document.getElementById('no-button');
+            const x = Math.random() * (window.innerWidth - 200);
+            const y = Math.random() * (window.innerHeight - 100);
+            btn.style.position = 'fixed';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+            btn.style.zIndex = '100';
+        }
+        // "Yes" Explosion Logic
+        function handleYes() {
+            // Confetti Blast
+            const duration = 15 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+            function randomInRange(min, max) {
+              return Math.random() * (max - min) + min;
+            }
+            const interval = setInterval(function() {
+              const timeLeft = animationEnd - Date.now();
+              if (timeLeft <= 0) {
+                return clearInterval(interval);
+              }
+              const particleCount = 50 * (timeLeft / duration);
+              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+            // Comic Bubbles
+            const words = ['POW!', 'ZAP!', 'BOOM!', 'YAY!', 'HAPPY!', 'BDAY!'];
+            const colors = ['#E4568B', '#F6C94D', '#A7C7E4', '#5D7B3D', '#F29BB9'];
+            for(let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    createComicBubble(
+                        words[Math.floor(Math.random() * words.length)],
+                        colors[Math.floor(Math.random() * colors.length)]
+                    );
+                }, i * 200);
+            }
+            // After 2 seconds, redirect or show success message
+            setTimeout(() => {
+                document.querySelector('h1').innerHTML = "LET'S PARTY!<br/><span class='text-white text-outline'>Dhumbluuu</span>";
+            }, 500);
+        }
+        function createComicBubble(text, color) {
+            const bubble = document.createElement('div');
+            bubble.className = 'comic-bubble';
+            bubble.style.left = Math.random() * 80 + 10 + '%';
+            bubble.style.top = Math.random() * 80 + 10 + '%';
+            bubble.innerHTML = `
+                <div style="background: ${color}; padding: 20px 40px; border: 6px solid black; border-radius: 20px; box-shadow: 10px 10px 0 black; transform: rotate(${Math.random() * 40 - 20}deg)">
+                    <span style="font-family: 'Bungee', cursive; font-size: 3rem; color: white; -webkit-text-stroke: 2px black;">${text}</span>
+                </div>
+            `;
+            document.body.appendChild(bubble);
+            setTimeout(() => {
+                bubble.style.transition = 'all 0.5s ease-out';
+                bubble.style.opacity = '0';
+                bubble.style.transform = 'scale(1.5) translateY(-100px)';
+                setTimeout(() => bubble.remove(), 500);
+            }, 2000);
+        }
+    </script>
+
+</body></html>

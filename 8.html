@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>This Part | For Dhumbluuu</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Space+Grotesk:wght@300;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#E4568B",
+              secondary: "#F6C94D",
+              "background-light": "#FFF9EB",
+            },
+            fontFamily: {
+              display: ["Syne", "sans-serif"],
+              body: ["Space Grotesk", "sans-serif"],
+              handwriting: ["Caveat", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+        .envelope-container { perspective: 1500px; }
+        .envelope-flap {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s linear 0.4s;
+            transform-origin: top;
+            z-index: 40;
+            backface-visibility: hidden;
+        }
+        .envelope-open .envelope-flap { transform: rotateX(180deg); z-index: 10; }
+        .letter-scroll {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s, opacity 0.6s ease 0.6s, transform 0.8s ease 0.5s;
+            z-index: 30;
+            position: relative;
+        }
+        .envelope-open .letter-scroll {
+            max-height: 2500px;
+            opacity: 1;
+            transform: translateY(0);
+            margin-top: -120px; 
+            padding: 3rem 2rem;
+        }
+        .noise-texture {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e5e7eb 0.5px, transparent 0.5px);
+            background-size: 12px 12px;
+        }
+        .floating { animation: float 3s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body class="bg-background-light font-body overflow-x-hidden">
+<main class="min-h-screen flex flex-col items-center justify-start p-6 relative">
+    
+    <div class="absolute top-10 left-10 text-secondary floating" style="animation-delay: 0s;">
+        <span class="material-icons text-6xl">star</span>
+    </div>
+    <div class="absolute top-40 right-10 text-primary floating" style="animation-delay: 1s;">
+        <span class="material-icons text-5xl">favorite</span>
+    </div>
+    <div class="absolute bottom-20 left-15 text-leaf-green opacity-40 floating" style="animation-delay: 0.5s;">
+        <span class="material-icons text-7xl">local_florist</span>
+    </div>
+
+    <header class="text-center mt-12 mb-20 relative z-10">
+        <h1 class="font-display text-6xl md:text-8xl text-black leading-none uppercase tracking-tighter">THIS PART</h1>
+        <p class="mt-4 text-gray-600 italic font-serif">A small token for a giant heart.</p>
+    </header>
+
+    <div class="envelope-container relative w-full max-w-2xl cursor-pointer" id="envelope-wrapper">
+        <div class="w-full flex flex-col items-center" id="envelope">
+            
+            <div class="w-[92%]">
+                <div class="letter-scroll noise-texture text-stone-800 shadow-2xl rounded-lg border border-stone-200">
+                    <div class="max-w-lg mx-auto">
+                        <div class="font-handwriting text-2xl md:text-3xl leading-relaxed space-y-6">
+                            <p>I’m grateful for you in ways I don’t always express perfectly.</p>
+                            <p>Thank you for your patience, especially when I’m not at my best. Thank you for the way you make space for me. Thank you for loving me in ways that feel steady, not conditional.</p>
+                            <p>Loving you feels safe. Choosing you feels natural. And being loved by you feels like something I don’t take lightly.</p>
+                            <p>Loving you isn't something I have to convince myself to do. It's not work. It's not a choice I remake every day. It's just... what makes sense.</p>
+                            <p>You make me want to be the kind of person who notices things. Who cares about the details. Who shows up. Not because I have to. Because being around you makes me want to be better at being me.</p>
+                            <p>I love hearing your thoughts. The way your brain works, the way you process the world, the tangents you go on that somehow always circle back to something profound.</p>
+                            <p>You don't ask me to change. You don't need me to perform. You just let me exist next to you, flaws, weird habits, all of it and somehow that feels like the safest place I've ever been.</p>
+                            <p>I don't need you to complete me. I just really, really like who I am when I'm with you. And I'm so grateful I get to know you like this.</p>
+                            <p>Bas itna hi kehna tha.</p>
+                            <p>Thank you for being born. Thank you for becoming this version of yourself. Thank you for letting me be part of your world.</p>
+                            <p class="text-primary font-bold pt-4">(Wowwwww…. I’m a terrific writer. Bina koi natak dikhaye dhang se is sab ka reaction/reply/response de dena, nhi toh…. Bas achcha nhi hoga. YAAD RAKHNA!)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative w-full aspect-[1.6/1] bg-secondary rounded-b-xl shadow-2xl z-20 overflow-visible">
+                <div class="envelope-flap absolute top-0 left-0 w-full h-full bg-[#f2c044] rounded-t-xl flex flex-col items-center justify-center border-b-2 border-black/5 shadow-inner">
+                    <span class="material-icons text-5xl text-white mb-2">mail_outline</span>
+                    <span class="font-display text-white text-sm tracking-widest uppercase">For Dhumbluuu</span>
+                </div>
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+                    <div class="w-16 h-16 bg-primary rounded-full shadow-lg flex items-center justify-center text-white border-2 border-white/20">
+                        <span class="material-icons">favorite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12 text-primary font-display tracking-widest animate-pulse" id="hint">
+            CLICK TO OPEN THE MAGIC
+        </div>
+    </div>
+</main>
+
+<script>
+    const wrapper = document.getElementById('envelope-wrapper');
+    const envelope = document.getElementById('envelope');
+    const hint = document.getElementById('hint');
+
+    wrapper.addEventListener('click', () => {
+        envelope.classList.toggle('envelope-open');
+        if (envelope.classList.contains('envelope-open')) {
+            hint.innerText = "SCROLL DOWN TO READ THE STORY";
+            hint.classList.remove('animate-pulse');
+        } else {
+            hint.innerText = "CLICK TO OPEN THE MAGIC";
+            hint.classList.add('animate-pulse');
+        }
+    });
+</script>
+</body>
+</html>

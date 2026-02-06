@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Dhumbluuu | Moments Kept</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Bungee&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary: #E4568B;
+            --secondary: #F6C94D;
+            --accent: #A7C7E4;
+            --leaf: #5D7B3D;
+            --blush: #F29BB9;
+            --cork: #D2B48C;
+            --neon-string: #39FF14;
+        }
+        @layer components {
+            .polaroid {
+                @apply bg-white p-4 pb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] border-2 border-black cursor-grab active:cursor-grabbing transition-all duration-200 hover:rotate-2 z-20;
+            }
+            .polaroid-zoom {
+                @apply fixed z-[100] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-125 rotate-0 cursor-default border-8 shadow-[20px_20px_0px_0px_var(--primary)] !important;
+            }
+            .corkboard-bg {
+                background-color: #dcb68c;
+                background-image: radial-gradient(#c4a47c 20%, transparent 20%);
+                background-size: 25px 25px;
+            }
+            .neon-line {
+                stroke: var(--neon-string);
+                stroke-width: 3;
+                filter: drop-shadow(0 0 5px var(--neon-string));
+                pointer-events: none;
+            }
+            .memory-text {
+                @apply hidden mt-4 p-3 bg-slate-50 border-t-2 border-dashed border-black font-['Outfit'] text-sm italic text-black whitespace-pre-line text-left;
+            }
+            .polaroid-zoom .memory-text {
+                @apply block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#dcb68c] overflow-hidden font-['Outfit']">
+
+<header class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center pointer-events-none">
+    <div class="bg-white border-4 border-black px-6 py-2 shadow-[6px_6px_0px_0px_black] pointer-events-auto">
+        <h1 class="font-['Bungee'] text-2xl text-black">MOMENTS KEPT</h1>
+    </div>
+    <div class="flex gap-4 pointer-events-auto">
+        <div class="bg-[var(--secondary)] border-4 border-black px-4 py-2 font-bold rotate-3">
+            Dhumbluuu's Board
+        </div>
+        <button class="w-12 h-12 rounded-full border-4 border-black bg-white flex items-center justify-center shadow-[4px_4px_0px_0px_black] hover:translate-y-1 hover:shadow-none transition-all">
+            <span class="material-symbols-outlined font-bold">drag_indicator</span>
+        </button>
+    </div>
+</header>
+
+<main class="relative w-screen h-screen corkboard-bg overflow-hidden">
+    <svg class="absolute inset-0 w-full h-full z-10 pointer-events-none">
+        <line class="neon-line" x1="20%" x2="45%" y1="25%" y2="40%"></line>
+        <line class="neon-line" x1="45%" x2="35%" y1="40%" y2="70%"></line>
+        <line class="neon-line" x1="35%" x2="70%" y1="70%" y2="60%"></line>
+    </svg>
+
+    <div class="polaroid absolute top-[15%] left-[12%] w-64 -rotate-3" id="moment-1">
+        <div class="aspect-square bg-slate-200 border-2 border-black overflow-hidden mb-4 relative">
+            <img alt="The beginning" class="w-full h-full object-cover" src=""/>
+        </div>
+        <p class="font-['Bungee'] text-sm text-center">The beginning</p>
+        <div class="memory-text">
+            Ghughra - Riverside. Golden hour. Sam with a camera.
+            And then that photo.
+            I looked at it and thought, "Damn... we look good together."
+            And then, "Wait. What if...?"
+            "What if we...?"
+            You know the rest.
+            Honestly? Best "what if" I ever followed.
+        </div>
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-red-500 rounded-full border-2 border-black flex items-center justify-center shadow-md">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+        </div>
+    </div>
+
+    <div class="polaroid absolute top-[35%] left-[40%] w-72 rotate-6" id="moment-2">
+        <div class="aspect-video bg-slate-200 border-2 border-black overflow-hidden mb-4 relative">
+            <img alt="The conversations" class="w-full h-full object-cover" src=""/>
+        </div>
+        <p class="font-['Bungee'] text-sm text-center">The conversations</p>
+        <div class="memory-text">
+            I remember thinking, “Oh. This one’s different.”
+            Calm. Thoughtful. Slightly impossible to read.
+            (Still true, by the way.)
+
+            The ones that started casually and somehow turned into hours.
+            The ones where time disappeared and feelings quietly showed up instead.
+        </div>
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full border-2 border-black flex items-center justify-center shadow-md">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+        </div>
+    </div>
+
+    <div class="absolute bottom-[20%] left-[10%] w-56 h-56 bg-[var(--secondary)] border-2 border-black shadow-[6px_6px_0px_0px_black] p-6 -rotate-2 z-20">
+        <div class="w-full h-full font-['Outfit'] font-bold text-lg leading-tight">
+            "Every moment with you is a favorite memory. Can't wait for more! <br/><br/> - Forever D."
+        </div>
+        <div class="absolute -top-2 left-10 w-12 h-4 bg-white/40 border-x border-black/10"></div>
+    </div>
+
+    <div class="polaroid absolute bottom-[15%] left-[30%] w-64 -rotate-6" id="moment-3">
+        <div class="aspect-square bg-slate-200 border-2 border-black overflow-hidden mb-4 relative">
+            <img alt="The way you care" class="w-full h-full object-cover" src=""/>
+        </div>
+        <p class="font-['Bungee'] text-sm text-center">The way you care</p>
+        <div class="memory-text">
+            Not loudly.
+            Not for attention.
+            Just consistently.
+
+            The kind of care that makes people feel safe without realizing why.
+        </div>
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-green-500 rounded-full border-2 border-black flex items-center justify-center shadow-md">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+        </div>
+    </div>
+
+    <div class="polaroid absolute top-[25%] right-[15%] w-72 rotate-2" id="moment-4">
+        <div class="aspect-square bg-slate-200 border-2 border-black overflow-hidden mb-4 relative">
+            <img alt="Us, now" class="w-full h-full object-cover" src=""/>
+        </div>
+        <p class="font-['Bungee'] text-sm text-center">Us, now</p>
+        <div class="memory-text">
+            Still here.
+            Still choosing each other.
+            Still growing — sometimes gracefully, sometimes not — but together.
+        </div>
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-yellow-400 rounded-full border-2 border-black flex items-center justify-center shadow-md">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+        </div>
+    </div>
+
+    <div class="absolute top-[65%] right-[30%] z-10 opacity-20 pointer-events-none">
+        <span class="material-symbols-outlined text-[140px] text-black rotate-12">auto_awesome</span>
+    </div>
+    <div class="absolute bottom-[40%] right-[10%] z-10 opacity-20 pointer-events-none">
+        <span class="material-symbols-outlined text-[120px] text-black -rotate-12">favorite</span>
+    </div>
+</main>
+
+<footer class="fixed bottom-0 left-0 w-full z-50 p-8 flex justify-center">
+    <div class="flex gap-4">
+        <button class="bg-black text-white px-8 py-4 font-['Bungee'] text-xl border-4 border-black shadow-[8px_8px_0px_0px_var(--primary)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+            NEXT SECTION ->
+        </button>
+    </div>
+</footer>
+
+<div class="fixed inset-0 bg-black/60 z-[90] hidden transition-opacity duration-300" id="zoom-overlay"></div>
+
+<script>
+    const polaroids = document.querySelectorAll('.polaroid');
+    const overlay = document.getElementById('zoom-overlay');
+    let zoomedElement = null;
+
+    // Zoom and Text Reveal Functionality
+    polaroids.forEach(p => {
+        p.addEventListener('click', (e) => {
+            if (zoomedElement === p) {
+                closeZoom();
+            } else {
+                if (zoomedElement) zoomedElement.classList.remove('polaroid-zoom');
+                p.classList.add('polaroid-zoom');
+                overlay.classList.remove('hidden');
+                zoomedElement = p;
+            }
+        });
+    });
+
+    overlay.addEventListener('click', closeZoom);
+
+    function closeZoom() {
+        if (zoomedElement) {
+            zoomedElement.classList.remove('polaroid-zoom');
+            overlay.classList.add('hidden');
+            zoomedElement = null;
+        }
+    }
+
+    // Interactive Dragging Logic
+    polaroids.forEach(el => {
+        let isDragging = false;
+        let startX, startY, initialLeft, initialTop;
+
+        el.addEventListener('mousedown', (e) => {
+            if (el.classList.contains('polaroid-zoom')) return;
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            initialLeft = el.offsetLeft;
+            initialTop = el.offsetTop;
+            el.style.zIndex = "40";
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const dx = e.clientX - startX;
+            const dy = e.clientY - startY;
+            el.style.left = `${initialLeft + dx}px`;
+            el.style.top = `${initialTop + dy}px`;
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                el.style.zIndex = "20";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

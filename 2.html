@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dhumbluuu | Vibrant Retro-Pop Arrival</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&amp;family=Outfit:wght@400;900&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#E4568B",
+                        secondary: "#F6C94D",
+                        accent: "#A7C7E4",
+                        leaf: "#5D7B3D",
+                        blush: "#F29BB9",
+                        "background-light": "#FFFDF2",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        display: ["Shrikhand", "serif"],
+                        outfit: ["Outfit", "sans-serif"],
+                        sans: ["Space Grotesk", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '12px',
+                        'xl': '24px',
+                        '2xl': '36px',
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .parallax-container {
+            perspective: 1000px;
+        }
+        .staggered-text span {
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .staggered-text span:hover {
+            transform: translateY(-10px) rotate(-2deg);
+            color: #F6C94D;
+        }
+        .teleport-btn {
+            transition: all 0.1s ease-in-out;
+        }
+        .text-outline {
+            -webkit-text-stroke: 2px currentColor;
+            color: transparent;
+        }
+        #celebration-section {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans overflow-x-hidden transition-colors duration-300">
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-[15%] left-[10%] opacity-30 dark:opacity-50">
+<span class="material-symbols-rounded text-primary text-6xl">favorite</span>
+</div>
+<div class="absolute top-[60%] right-[15%] opacity-40 dark:opacity-60">
+<span class="material-symbols-rounded text-secondary text-8xl">star</span>
+</div>
+<div class="absolute bottom-[20%] left-[20%] opacity-30 dark:opacity-50">
+<span class="material-symbols-rounded text-accent text-5xl">auto_awesome</span>
+</div>
+<div class="absolute top-[30%] right-[30%] opacity-20 dark:opacity-40">
+<span class="material-symbols-rounded text-leaf text-7xl">filter_vintage</span>
+</div>
+</div>
+<main class="relative z-10 min-h-screen">
+<header class="fixed top-0 w-full p-6 flex justify-between items-center z-50">
+<div class="bg-primary px-4 py-2 rounded-full shadow-lg border-2 border-black dark:border-white">
+<span class="font-display text-white text-xl">Dhumbluuu</span>
+</div>
+<button class="w-12 h-12 rounded-full bg-white dark:bg-zinc-800 border-2 border-black dark:border-white flex items-center justify-center shadow-lg hover:rotate-12 transition-transform" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-rounded text-black dark:text-white">dark_mode</span>
+</button>
+</header>
+<section class="min-h-screen flex flex-col items-center justify-center p-4 lg:p-8 space-y-12" id="entry-section">
+<div class="w-full max-w-6xl space-y-4">
+<div class="w-full bg-primary p-12 lg:p-16 rounded-xl border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+<h1 class="font-outfit font-black text-6xl md:text-8xl lg:text-9xl uppercase leading-none tracking-tighter text-outline hover:text-white transition-all cursor-default select-none">
+                        This exists
+                    </h1>
+</div>
+<div class="w-full bg-secondary p-12 lg:p-16 rounded-xl border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] transform rotate-1 hover:rotate-0 transition-transform duration-500 ml-auto lg:w-[90%]">
+<h2 class="font-outfit font-black text-5xl md:text-7xl lg:text-8xl uppercase leading-none tracking-tighter text-black staggered-text">
+<span>Because</span> <span>you</span> <span>exist.</span>
+</h2>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 border-4 border-black dark:border-white p-8 md:p-12 rounded-2xl shadow-[12px_12px_0px_0px_#A7C7E4] dark:shadow-[12px_12px_0px_0px_#5D7B3D] max-w-md w-full text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-rounded text-blush text-4xl">celebration</span>
+</div>
+<h3 class="font-display text-3xl md:text-4xl text-black dark:text-white mb-8">
+                    Do you want to celebrate with me?
+                </h3>
+<div class="flex flex-col sm:flex-row gap-6 items-center justify-center">
+<button class="bg-secondary hover:bg-yellow-300 text-black font-bold py-4 px-10 rounded-xl border-2 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all text-xl uppercase tracking-wider w-full sm:w-auto" id="yesButton">
+                        Yes!
+                    </button>
+<button class="teleport-btn bg-accent hover:bg-blue-300 text-black font-bold py-4 px-10 rounded-xl border-2 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-xl uppercase tracking-wider w-full sm:w-auto" id="noButton">
+                        No
+                    </button>
+</div>
+</div>
+<footer class="w-full flex justify-center items-center py-10 text-black dark:text-white font-bold opacity-60">
+<div class="text-sm tracking-widest uppercase">
+                    Designed for Dhumbluuu by the Collective
+                </div>
+</footer>
+</section>
+<section class="min-h-screen flex flex-col items-center justify-center p-4 lg:p-8 animate-in fade-in duration-700" id="celebration-section">
+<div class="max-w-4xl w-full space-y-8 text-center">
+<div class="bg-blush p-12 rounded-3xl border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-2">
+<h2 class="font-display text-5xl md:text-7xl text-white mb-6">Yay! Let's Go! 🎈</h2>
+<p class="font-outfit text-xl md:text-2xl text-black font-medium">Get ready for the most vibrant birthday celebration ever.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+<div class="bg-secondary p-4 rounded-xl border-2 border-black -rotate-3">
+<span class="material-symbols-rounded text-4xl">cake</span>
+</div>
+<div class="bg-accent p-4 rounded-xl border-2 border-black rotate-6">
+<span class="material-symbols-rounded text-4xl">music_note</span>
+</div>
+<div class="bg-primary p-4 rounded-xl border-2 border-black -rotate-6">
+<span class="material-symbols-rounded text-4xl">camera_roll</span>
+</div>
+<div class="bg-leaf p-4 rounded-xl border-2 border-black rotate-3">
+<span class="material-symbols-rounded text-4xl">confirmation_number</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+        const entrySection = document.getElementById('entry-section');
+        const celebrationSection = document.getElementById('celebration-section');
+        // Teleporting No Button logic
+        const moveButton = () => {
+            const maxX = window.innerWidth - noButton.offsetWidth - 100;
+            const maxY = window.innerHeight - noButton.offsetHeight - 100;
+            const randomX = Math.max(0, Math.floor(Math.random() * maxX));
+            const randomY = Math.max(0, Math.floor(Math.random() * maxY));
+            noButton.style.position = 'fixed';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+            noButton.style.zIndex = '9999';
+        };
+        noButton.addEventListener('mouseover', moveButton);
+        noButton.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            moveButton();
+        });
+        // Yes Button Transition
+        yesButton.addEventListener('click', () => {
+            entrySection.style.display = 'none';
+            celebrationSection.style.display = 'flex';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        // Parallax effect for floating icons
+        document.addEventListener('mousemove', (e) => {
+            const icons = document.querySelectorAll('.fixed .material-symbols-rounded');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            icons.forEach((icon, index) => {
+                const speed = (index + 1) * 30;
+                const xOffset = (x - 0.5) * speed;
+                const yOffset = (y - 0.5) * speed;
+                icon.parentElement.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+    </script>
+
+</body></html>

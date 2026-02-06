@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dhumbluuu | Retro-Pop Invitation</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&amp;family=Bungee&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --sunset-petal: #E4568B;
+            --golden-pollen: #F6C94D;
+            --evening-sky: #A7C7E4;
+            --leaflit-green: #5D7B3D;
+            --rosebud-blush: #F29BB9;
+        }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-3deg); }
+            75% { transform: rotate(3deg); }
+        }
+        @keyframes springPop {
+            0% { transform: scale(0) rotate(-15deg); opacity: 0; }
+            70% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        .animate-shake:hover {
+            animation: shake 0.2s infinite;
+        }
+        .spoiler-reveal {
+            display: none;
+        }
+        .spoiler-reveal.active {
+            display: block;
+            animation: springPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        .chunky-border {
+            border: 6px solid #000000;
+        }
+        .retro-shadow {
+            box-shadow: 12px 12px 0px 0px #000000;
+        }
+        .retro-shadow-small {
+            box-shadow: 6px 6px 0px 0px #000000;
+        }
+        .text-outline {
+            -webkit-text-stroke: 2px black;
+        }
+    </style>
+</head>
+<body class="bg-[var(--evening-sky)] min-h-screen overflow-x-hidden font-['Outfit']">
+<div class="fixed inset-0 flex">
+<div class="w-1/2 bg-[var(--sunset-petal)] border-r-4 border-black"></div>
+<div class="w-1/2 bg-[var(--golden-pollen)]"></div>
+</div>
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<div class="absolute top-10 left-10 transform rotate-12">
+<span class="material-symbols-outlined text-[120px] text-black">celebration</span>
+</div>
+<div class="absolute bottom-20 left-20 transform -rotate-12">
+<span class="material-symbols-outlined text-[100px] text-black">cake</span>
+</div>
+<div class="absolute top-1/4 right-1/4 transform rotate-45">
+<span class="material-symbols-outlined text-[150px] text-black">star</span>
+</div>
+<div class="absolute bottom-1/3 right-10 transform -rotate-6">
+<span class="material-symbols-outlined text-[130px] text-black">favorite</span>
+</div>
+</div>
+<main class="relative z-10 flex flex-col items-center justify-center min-h-screen p-6">
+<div class="w-full max-w-4xl flex flex-col items-center space-y-8">
+<div class="bg-white chunky-border p-10 retro-shadow transform -rotate-2 relative mb-12">
+<div class="absolute -top-8 -left-8 bg-[var(--leaflit-green)] chunky-border px-6 py-2 rotate-[-12deg]">
+<span class="font-['Bungee'] text-2xl text-white">INVITATION</span>
+</div>
+<div class="text-center space-y-6">
+<h2 class="font-['Bungee'] text-4xl md:text-6xl text-black leading-tight">
+                        TO THE COOLEST <br/>
+<span class="bg-[var(--sunset-petal)] text-white px-4 py-1">DHUMBLUUU</span> <br/>
+                        BASH EVER!
+                    </h2>
+<p class="text-2xl font-bold text-black max-w-md mx-auto">
+                        Something epic is cooking and you're officially on the guest list! 
+                    </p>
+</div>
+<div class="spoiler-reveal absolute -bottom-16 -right-12 z-30" id="spoiler-sticker">
+<div class="bg-[var(--rosebud-blush)] chunky-border p-6 retro-shadow-small rotate-6">
+<span class="font-['Bungee'] text-3xl text-black block mb-1">SECRET UNLOCKED!</span>
+<p class="font-bold text-xl text-white text-outline">THERE WILL BE PIZZA! 🍕</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-6">
+<button class="group relative bg-[var(--leaflit-green)] chunky-border px-16 py-8 retro-shadow animate-shake transition-all active:translate-x-1 active:translate-y-1 active:shadow-none" onclick="document.getElementById('spoiler-sticker').classList.add('active'); this.classList.add('opacity-50', 'pointer-events-none')">
+<span class="font-['Bungee'] text-5xl md:text-7xl text-white">READY?</span>
+<div class="absolute -top-4 -right-4 bg-[var(--sunset-petal)] chunky-border p-2 rotate-12 group-hover:rotate-0 transition-transform">
+<span class="font-bold text-white px-2">CLICK ME!</span>
+</div>
+</button>
+<div class="flex gap-4">
+<div class="bg-white chunky-border p-4 retro-shadow-small rotate-3">
+<span class="material-symbols-outlined text-4xl">calendar_today</span>
+</div>
+<div class="bg-[var(--golden-pollen)] chunky-border p-4 retro-shadow-small -rotate-6">
+<span class="material-symbols-outlined text-4xl">location_on</span>
+</div>
+<div class="bg-[var(--sunset-petal)] chunky-border p-4 retro-shadow-small rotate-12">
+<span class="material-symbols-outlined text-4xl">mood</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-6 left-6 flex gap-2">
+<div class="w-8 h-8 bg-black rounded-full"></div>
+<div class="w-8 h-8 bg-white border-2 border-black rounded-full"></div>
+<div class="w-8 h-8 bg-[var(--sunset-petal)] border-2 border-black rounded-full"></div>
+</div>
+
+</body></html>

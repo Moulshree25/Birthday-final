@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Way You | Dhumbluuu</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&amp;family=Syne:wght@400;700;800&amp;family=Permanent+Marker&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#E4568B",
+                        "sunset-petal": "#E4568B",
+                        "golden-pollen": "#F6C94D",
+                        "evening-sky": "#A7C7E4",
+                        "leafplit-green": "#5D7B3D",
+                        "rosebud-blush": "#F29BB9",
+                        "background-light": "#FFF9F2",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        display: ["Syne", "sans-serif"],
+                        body: ["Space Grotesk", "sans-serif"],
+                        handwritten: ["Permanent Marker", "cursive"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    }
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        .sticker-peel {
+            position: relative;
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .sticker-peel::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2));
+            transition: all 0.4s ease;
+        }
+        .sticker-peel:hover::after {
+            width: 60px;
+            height: 60px;
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px #E4568B, 0 0 20px #E4568B, 0 0 30px #F29BB9;
+        }
+        .warped-text {
+            transform: skew(-5deg) rotate(-2deg);
+        }
+        .grainy {
+            position: relative;
+        }
+        .grainy::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAtkF25SzbHo0Zmx4oLTLNLFlRTctJ58NCUyny99L3Y42RVbJlSvWv6VnMdKIBH9a_XSIVuKpp_vs3GSP_oRmflcbz0FEKBZ5x2LOBbuapa7uUpcFrhNTFuobdMZaUszpJuIzuk0UvzEQ25-MndLWloMz7gADUGQQn9fzhLsKbhuMwvMutm5W3fq8EtVosEq6QgLAeHbYCW3gNQ7w62Uj4YeEEQAP9zgwX06IiXQTfaLSQ9ISmL20Oos88eWaKLASJsQSRybfVbG3w);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-gray-900 dark:text-gray-100 grainy overflow-x-hidden">
+<nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center mix-blend-difference text-white">
+<div class="font-display font-extrabold text-2xl tracking-tighter">DHUMBLUUU.</div>
+<div class="flex gap-8 items-center">
+<span class="text-xs uppercase tracking-[0.2em] font-bold text-white/80">Issue No. 03 — Discovery</span>
+<button class="p-2 rounded-full border border-current hover:bg-white hover:text-black transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-sm">dark_mode</span>
+</button>
+</div>
+</nav>
+<main class="min-h-screen flex flex-col md:flex-row items-stretch">
+<section class="w-full md:w-1/2 min-h-screen bg-evening-sky dark:bg-slate-900 flex items-center justify-center p-8 md:p-16 relative overflow-hidden border-b md:border-b-0 md:border-r border-black/10">
+<div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-rosebud-blush mix-blend-multiply opacity-60"></div>
+<div class="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-leafplit-green mix-blend-multiply opacity-60"></div>
+<div class="relative z-10 w-full max-w-md">
+<div class="sticker-peel bg-white p-3 rounded-sm rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Dhumbluuu Portrait" class="w-full h-[600px] object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6BtmDrZ8tmTp-1B-QxuicZVOWqFFiS000yk2qixcodflyoGiYUXreTcgMyEa1qXEkDM_mBEK4Hp8GiRf9BPkEFzKm_wwUuOcEandXwihskJOKlwI8R-95dLFdEyYJSqdpPRS9t6jFXyHvfZgi6SUDXpXI8EufisZwttYHO1DNzJ2UuMY6BAaNdJVcl8IUk2qiNubsgG4_ObSHe6iRi0taNZAfKXLNDUwH2o1vcqCHfx9ZCckTR5j9YgINFdOXPi2WNMBqp_doSpU"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 pointer-events-none">
+<h2 class="font-display font-black text-6xl text-white warped-text leading-none mb-4 drop-shadow-2xl">
+                            YOU LISTEN<br/>
+<span class="text-golden-pollen">MORE THAN</span><br/>
+                            YOU SPEAK.
+                        </h2>
+</div>
+</div>
+<div class="absolute -top-10 -right-10 text-rosebud-blush rotate-12">
+<span class="material-symbols-outlined text-6xl">auto_awesome</span>
+</div>
+<div class="absolute bottom-10 -left-16 hidden lg:block">
+<svg class="fill-none stroke-leafplit-green stroke-2" height="120" viewBox="0 0 120 120" width="120">
+<path d="M10,110 Q40,10 110,10"></path>
+<path d="M100,0 L110,10 L100,20"></path>
+</svg>
+<span class="font-handwritten text-leafplit-green block -mt-4 -ml-4 -rotate-12 text-xl">Totally rare!</span>
+</div>
+</div>
+</section>
+<section class="w-full md:w-1/2 min-h-screen flex flex-col justify-between p-8 md:p-16 relative">
+<div class="mt-20">
+<div class="flex items-center gap-4 mb-8">
+<span class="bg-primary text-white px-3 py-1 text-xs font-bold rounded-full uppercase tracking-widest">Profile 03</span>
+<div class="h-[1px] flex-grow bg-black/10 dark:bg-white/10"></div>
+</div>
+<div class="space-y-12">
+<h1 class="font-display font-extrabold text-7xl md:text-9xl tracking-tighter leading-[0.8] uppercase">
+                        THE WAY<br/>YOU
+                    </h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<div class="prose dark:prose-invert">
+<p class="text-xl leading-relaxed font-medium">
+                                It’s in the way you carry yourself through the chaos—with a quiet strength that doesn’t need to be loud to be heard. You are the steady anchor in every conversation.
+                            </p>
+<p class="text-gray-500 dark:text-gray-400">
+                                You have this rare gift of making people feel seen without even trying. Dhumbluuu, your sincerity is a soft glow in a world that often feels too bright.
+                            </p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="group bg-golden-pollen p-6 rounded-2xl transform hover:-rotate-2 transition-all cursor-pointer relative overflow-hidden">
+<img alt="background" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-30 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6BtmDrZ8tmTp-1B-QxuicZVOWqFFiS000yk2qixcodflyoGiYUXreTcgMyEa1qXEkDM_mBEK4Hp8GiRf9BPkEFzKm_wwUuOcEandXwihskJOKlwI8R-95dLFdEyYJSqdpPRS9t6jFXyHvfZgi6SUDXpXI8EufisZwttYHO1DNzJ2UuMY6BAaNdJVcl8IUk2qiNubsgG4_ObSHe6iRi0taNZAfKXLNDUwH2o1vcqCHfx9ZCckTR5j9YgINFdOXPi2WNMBqp_doSpU"/>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-black mb-4">theater_comedy</span>
+<h4 class="font-display font-bold text-black text-xl mb-1">Certified drama king</h4>
+<p class="text-black/70 text-sm">Always keeping it theatrical.</p>
+</div>
+</div>
+<div class="group bg-leafplit-green p-6 rounded-2xl transform hover:rotate-2 transition-all cursor-pointer text-white relative overflow-hidden">
+<img alt="background" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:opacity-30 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6BtmDrZ8tmTp-1B-QxuicZVOWqFFiS000yk2qixcodflyoGiYUXreTcgMyEa1qXEkDM_mBEK4Hp8GiRf9BPkEFzKm_wwUuOcEandXwihskJOKlwI8R-95dLFdEyYJSqdpPRS9t6jFXyHvfZgi6SUDXpXI8EufisZwttYHO1DNzJ2UuMY6BAaNdJVcl8IUk2qiNubsgG4_ObSHe6iRi0taNZAfKXLNDUwH2o1vcqCHfx9ZCckTR5j9YgINFdOXPi2WNMBqp_doSpU"/>
+<div class="relative z-10">
+<span class="material-symbols-outlined mb-4">hearing</span>
+<h4 class="font-display font-bold text-xl mb-1">Listener by accident</h4>
+<p class="text-white/70 text-sm">Wait, were you talking to me?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20">
+<p class="font-display font-black text-4xl md:text-6xl text-primary neon-glow">
+                    And yes — I notice. Always.
+                </p>
+<div class="flex gap-4 mt-8 items-center">
+<button class="bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform flex items-center gap-2">
+                        Next Spread <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background-light dark:border-background-dark bg-sunset-petal"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background-light dark:border-background-dark bg-golden-pollen"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background-light dark:border-background-dark bg-evening-sky"></div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-rosebud-blush flex items-center justify-center text-center p-2 rotate-12 cursor-help group shadow-xl hover:rotate-0 transition-transform">
+<span class="font-handwritten text-xs leading-none text-primary group-hover:scale-110 transition-transform">PEEL ME PEEL ME PEEL ME</span>
+</div>
+</section>
+</main>
+<footer class="p-8 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] font-bold text-gray-400 bg-background-light dark:bg-background-dark">
+<div class="mb-4 md:mb-0">© 2024 Dhumbluuu Limited Edition Birthday Release</div>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Spotify</a>
+<a class="hover:text-primary transition-colors" href="#">Archive</a>
+</div>
+</footer>
+
+</body></html>
