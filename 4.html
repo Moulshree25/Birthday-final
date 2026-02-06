@@ -117,7 +117,7 @@
 </div>
 </div>
 <div class="flex flex-col items-center space-y-12 w-full mt-10 relative">
-<button class="shake-hover w-full md:w-auto px-12 py-6 bg-primary text-white font-heading text-3xl font-extrabold border-4 border-slate-900 shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all uppercase tracking-tighter" onclick="handleReadyClick()">
+<button class="shake-hover w-full md:w-auto px-12 py-6 bg-primary text-white font-heading text-3xl font-extrabold border-4 border-slate-900 shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all uppercase tracking-tighter" onclick="handleReadyClick();">
                     Okay, I’m ready
                 </button>
 <div class="hidden absolute -top-48 left-1/2 -translate-x-1/2 w-72 bg-white dark:bg-slate-800 p-6 border-4 border-slate-900 shadow-neo z-50" id="spoiler-popup">
@@ -192,6 +192,11 @@
         setTimeout(() => {
             document.getElementById('details-section').scrollIntoView({ behavior: 'smooth' });
         }, 1500);
+
+        // Redirect to next page after a delay
+        setTimeout(() => {
+            window.location.href = '5.html';
+        }, 3000);
     }
 </script>
 

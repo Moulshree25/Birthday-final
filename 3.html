@@ -8,6 +8,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&amp;family=Bungee&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+      function delayedRedirect(url, delay) {
+            setTimeout(() => {
+                window.location.href = url;
+            }, delay);
+        }
+</script>
 <style type="text/tailwindcss">
         :root {
             --sunset-petal: #E4568B;
@@ -93,7 +100,7 @@
 </div>
 </div>
 <div class="flex flex-col items-center gap-6">
-<button class="group relative bg-[var(--leaflit-green)] chunky-border px-16 py-8 retro-shadow animate-shake transition-all active:translate-x-1 active:translate-y-1 active:shadow-none" onclick="document.getElementById('spoiler-sticker').classList.add('active'); this.classList.add('opacity-50', 'pointer-events-none')">
+<button class="group relative bg-[var(--leaflit-green)] chunky-border px-16 py-8 retro-shadow animate-shake transition-all active:translate-x-1 active:translate-y-1 active:shadow-none" onclick="document.getElementById('spoiler-sticker').classList.add('active'); this.classList.add('opacity-50', 'pointer-events-none'); this.addEventListener('animationend', () => this.classList.remove('animate-shake')); delayedRedirect('4.html', 3000)">
 <span class="font-['Bungee'] text-5xl md:text-7xl text-white">READY?</span>
 <div class="absolute -top-4 -right-4 bg-[var(--sunset-petal)] chunky-border p-2 rotate-12 group-hover:rotate-0 transition-transform">
 <span class="font-bold text-white px-2">CLICK ME!</span>
